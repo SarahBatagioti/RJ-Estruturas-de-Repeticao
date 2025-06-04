@@ -4,9 +4,9 @@ const vingadores = [
         codinome: 'Capitão América',
         armaPrincipal: 'Escudo americano',
         armaSecundaria: '',
-        velocidade: 85, // de 0 a 100
-        forca: 75, // de 0 a 100
-        resistencia: 80, // de 0 a 100
+        velocidade: 85, 
+        forca: 75, 
+        resistencia: 80,
         descricao: function () {
             return "Nome do personagem: " + this.nome + "\n" +
                    "Codinome do personagem: " + this.codinome + "\n" +
@@ -22,9 +22,9 @@ const vingadores = [
         codinome: 'Iron Man',
         armaPrincipal: 'Armadura Stark',
         armaSecundaria: 'Repulsores',
-        velocidade: 80, // de 0 a 100
-        forca: 85, // de 0 a 100
-        resistencia: 70, // de 0 a 100
+        velocidade: 80, 
+        forca: 85, 
+        resistencia: 70,
         descricao: function () {
             return "Nome do personagem: " + this.nome + "\n" +
                    "Codinome do personagem: " + this.codinome + "\n" +
@@ -40,9 +40,9 @@ const vingadores = [
         codinome: 'Thor',
         armaPrincipal: 'Mjolnir',
         armaSecundaria: 'Raio',
-        velocidade: 70, // de 0 a 100
-        forca: 100, // de 0 a 100
-        resistencia: 90, // de 0 a 100
+        velocidade: 70, 
+        forca: 100, 
+        resistencia: 90, 
         descricao: function () {
             return "Nome do personagem: " + this.nome + "\n" +
                    "Codinome do personagem: " + this.codinome + "\n" +
@@ -58,9 +58,45 @@ const vingadores = [
         codinome: 'Hulk',
         armaPrincipal: 'Força bruta',
         armaSecundaria: 'Raiva',
-        velocidade: 60, // de 0 a 100
-        forca: 100, // de 0 a 100
-        resistencia: 95, // de 0 a 100
+        velocidade: 60, 
+        forca: 100, 
+        resistencia: 95, 
+        descricao: function () {
+            return "Nome do personagem: " + this.nome + "\n" +
+                   "Codinome do personagem: " + this.codinome + "\n" +
+                   "Arma principal: " + this.armaPrincipal + "\n" +
+                   "Arma secundária: " + this.armaSecundaria + "\n" +
+                   "Nível de força: " + this.forca + "\n" +
+                   "Nível de velocidade: " + this.velocidade + "\n" +
+                   "Nível de resistência: " + this.resistencia;
+        }
+    },
+    {
+        nome: 'Natasha Romanoff',
+        codinome: 'Viúva Negra',
+        armaPrincipal: 'Armadura e armas de fogo',
+        armaSecundaria: 'Habilidades de espionagem',
+        velocidade: 75, 
+        forca: 70, 
+        resistencia: 80, 
+        descricao: function () {
+            return "Nome do personagem: " + this.nome + "\n" +
+                   "Codinome do personagem: " + this.codinome + "\n" +
+                   "Arma principal: " + this.armaPrincipal + "\n" +
+                   "Arma secundária: " + this.armaSecundaria + "\n" +
+                   "Nível de força: " + this.forca + "\n" +
+                   "Nível de velocidade: " + this.velocidade + "\n" +
+                   "Nível de resistência: " + this.resistencia;
+        }
+    }, 
+    {
+        nome: 'Thanos',
+        codinome: 'O Titã Louco',
+        armaPrincipal: 'Manopla do Infinito',
+        armaSecundaria: 'Força e inteligência',
+        velocidade: 50, 
+        forca: 100, 
+        resistencia: 95, 
         descricao: function () {
             return "Nome do personagem: " + this.nome + "\n" +
                    "Codinome do personagem: " + this.codinome + "\n" +
@@ -72,6 +108,12 @@ const vingadores = [
         }
     }
 ];
+
+// Descrição de cada personagem
+vingadores.forEach(personagem => {
+    console.log(personagem.descricao());
+    console.log('----------------------------------');
+});
 
 // Função para comparar dois personagens
 function compararPersonagens(personagem1, personagem2) {
@@ -97,9 +139,3 @@ for (let i = 0; i < vingadores.length; i++) {
         compararPersonagens(vingadores[i], vingadores[j]);
     }
 }
-
-// Testando a descrição de cada personagem
-vingadores.forEach(personagem => {
-    console.log(personagem.descricao());
-    console.log('----------------------------------');
-});
